@@ -1,4 +1,4 @@
-var app = angular.module('BeervanaApp', ['ui.router', 'BeerCtrls', 'ui.bootstrap']);
+var app = angular.module('BeervanaApp', ['ui.router', 'BeerCtrls', 'ui.bootstrap', 'angular-scroll-animate']);
 
 app.config([
   '$stateProvider',
@@ -10,7 +10,8 @@ app.config([
     $stateProvider
     .state('home', {
       url: '/',
-      templateUrl: 'app/views/home.html'
+      templateUrl: 'app/views/home.html',
+      controller: 'HomeCtrl'
     })
     .state('search', {
       url: '/search',
@@ -25,6 +26,3 @@ app.config([
     $locationProvider.html5Mode(true);
 }])
 
-app.controller('SearchCtrl', ['$scope', '$http', function($scope, $http){
-  
-}])

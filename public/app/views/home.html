@@ -1,3 +1,26 @@
 <div class="container">
-  <h1>Beervana</h1>  
+
+  	<h1 class="title">BEERVANA</h1>  
+
+	<div>
+
+		<p>"The seperation is in the preperation" -Russel Wilson </p>
+
+	</div>
+
+	<section class="beer-instructions" >
+		
+		<p class="well col-xs-10">
+			Add Malted barley and soak it in hot water to release the malt sugars(60 degrees).
+		</p>
+
+		<img src="../images/malt.png" ng-repeat="beer in beers track by beer.id" when-visible="animateElementIn" class="hidden"/>
+
+		<div >
+			<img src="../images/pot.png"/>
+		</div>
+
+	</section>
+
+
 </div>

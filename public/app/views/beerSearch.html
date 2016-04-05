@@ -1,14 +1,16 @@
-<div class="container">
+<div>
   <form class="form" ng-submit="search()">
     <div class="form-group">
       <input type="text" placeholder="Search for Beer" id="search" class="form-control" ng-model="searchTerm">
       <button type="submit" ng-submit="search()" class="btn btn-primary">Search</button>
     </div>
   </form>
-</div>
 
-<div class="well" ng-repeat="beer in beers track by beer.id">
-  <h4>{{beer.name}}</h4>
-  <p>Description: {{beer.description || 'not available'}}</p>
-  <p>Style: {{beer.style.name}}</p>
+
+	<div class="well" style="visibility: hidden" ng-repeat="beer in beers track by beer.id" when-visible="animateElementIn" when-not-visible="animateElementOut">
+	  <h4>{{beer.name}}</h4>
+	  <p>Description: {{beer.description || 'not available'}}</p>
+	  <p>Style: {{beer.style.name}}</p>
+	</div>
+
 </div>
