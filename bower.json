@@ -1,0 +1,21 @@
+{
+  "name": "beervana",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Derek Nuzum and Jonathan Stevenson"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/JonathanAndrew/beervana",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-scroll-animate": "^0.9.8",
+    "animate.css": "^3.5.1"
+  }
+}
