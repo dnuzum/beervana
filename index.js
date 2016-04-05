@@ -9,7 +9,8 @@ var app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname,'public')));
+app.use(express.static(path.join(__dirname,'bower_components')));
 
 app.get('/api/beers', function(req, res) {
   var key = process.env.BEER_API_KEY;
