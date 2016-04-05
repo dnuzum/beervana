@@ -1,9 +1,9 @@
 angular.module('BeerCtrls', ['BeerServices'])
-.controller('BeerCtrl', ['$scope', 'Beer', function($scope, Beer) {
+.controller('BeerCtrl', ['$scope', 'Beer', function($scope, Beer ) {
 
 }])
 
-app.controller('SearchCtrl', ['$scope', '$http', function($scope, $http) {
+app.controller('SearchCtrl', ['$scope', '$http','$rootScope', '$document', function($scope, $http, $rootScope, $document) {
   console.log("hi");
   $scope.searchTerm = '';
   $scope.beers = [];
@@ -23,4 +23,24 @@ app.controller('SearchCtrl', ['$scope', '$http', function($scope, $http) {
       console.log(res);
     });
   }
+
+  $scope.animateElementIn = function($el) {
+    console.log($el['0'])
+    $el.css('visibility', 'visible');
+    $el.addClass('animated fadeInUp'); // this example leverages animate.css classes
+  };
+
+  $scope.animateElementOut = function($el) {
+    $el.css('visibility', 'hidden');
+    $el.removeClass('animated fadeInUp'); // this example leverages animate.css classes
+  };
+}]);
+
+app.controller("HomeCtrl", ["scope", function($scope){
+  $scope.animateElementIn = function($el) {
+    $el.removeClass('hidden');
+    $el.addClass('animated fadeInUp'); // this example leverages animate.css classes
+  };
 }])
+
+
