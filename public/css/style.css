@@ -1,0 +1,24 @@
+body{
+	width: 100%;
+	margin-top: 50px;
+	background-image: url("../images/SeattleApp.jpeg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.title{
+	font-family: 'Old Standard TT', serif;
+	margin: 2% auto;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+.navbar-brand{
+	font-family: 'Old Standard TT', serif !important;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
