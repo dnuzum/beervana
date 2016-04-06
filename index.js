@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname,'public')));
 app.use(express.static(path.join(__dirname,'bower_components')));
 
-var secret = "mysupersecretpassword";
+var secret = process.env.SUPER_SECRET;
 
 var mongoose = require('mongoose');
 var User = require('./models/user');
