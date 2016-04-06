@@ -1,11 +1,14 @@
 <div class="container">
+	<div class="logo-container">
+  		<img class="logo" src="./images/beervana-transparent.png"/> 
+  	</div>
 
-  	<h1 class="title">BEERVANA</h1>  
+	<div class="russel-wilson-quote">
+		<h3>"The seperation is in the preperation"<span>- Russel Wilson</span></h3>
+	</div>
 
 	<div>
-
-		<p>"The seperation is in the preperation" -Russel Wilson </p>
-
+		<h3 class="scroll">Scroll Down</h3>
 	</div>
 
 	<section class="beer-instructions" >
@@ -14,7 +17,7 @@
 			Add Malted barley and soak it in hot water to release the malt sugars(60 degrees).
 		</p>
 
-		<img src="../images/malt.png" ng-repeat="beer in beers track by beer.id" when-visible="animateElementIn" class="hidden"/>
+		<img src="../images/malt.png" when-visible="animateElementIn" />
 
 		<div >
 			<img src="../images/pot.png"/>
