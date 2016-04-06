@@ -1,12 +1,11 @@
 body{
-	width: 100%;
 	margin-top: 50px;
 	background-image: url("../images/SeattleApp.jpeg");
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	min-width: 350px;
+	width: 100%;
 }
 
 .container{
@@ -45,7 +44,7 @@ body{
 	height: 270px;
 }
 
-.malt-container,.pot-container,.wort-container,.dme-container,.hops-container,.fermentor-container,.hydrometer-container,.yeast-container,.fermenter-container{
+.malt-container,.pot-container,.wort-container,.dme-container,.hops-container,.fermenter-container,.hydrometer-container,.yeast-container,.immersion-container,.trub-container,.beer-container{
 	text-align: center;
 	width: 100%;
 	margin: 0 auto;
@@ -57,12 +56,16 @@ body{
 	margin-top: 2%;
 }
 
-.malt,.wort,.dme,.hops,.hydrometer,.yeast,.fermenter,.fermenter2{
+.malt,.wort,.dme,.hops,.hydrometer,.yeast,.fermenter,.fermenter2,.immersion,.trub,.beer{
 	width: 300px;
 	height: 300px;
 	margin-top: 2%;
 	border-radius: 100%;
 	border: 2px solid #fff;
+}
+.trub{
+	width: 300px;
+    height: 260px;
 }
 
 .logo-container{
@@ -85,36 +88,51 @@ body{
 }
 
 .instructions{
-	margin-top: 5%;
+	margin-top: 10%;
 	text-align: center;
 	font-size: 1.5em;
 	font-weight: bold;
 	padding: 1% !important;
-	background-color: rgba(255,255,255,.8) !important;
+	background-color: rgba(255,255,255,.9) !important;
 	width: 50%;
 	border: 2px solid #000 !important;
 }
 
-@media screen and (min-width: 700px) and (max-width: 900px){
+.enjoy{
+	border: 2px solid #000 !important;
+	background-color: rgba(255,255,255,.9) !important;
+	text-align: center;
+	font-weight: bold;
+	padding: 1% !important;
+	margin: 0 auto !important;
+	margin-top: 5%;
+}
+
+@media screen and (min-width: 768px) and (max-width: 900px){
+
+body{
+	width: 100%;
+	margin: 0 auto;
+}
 
 .beer-instructions{
 	width: 100%;
 }
 
-.inst1,.inst3,.inst5,.inst7,.inst9{
+.inst1,.inst3,.inst5,.inst6,.inst7,.inst9,.inst11{
 	float: left !important;
 	background-color: #000;
 }
 
-.inst2,.inst4,.inst6,.inst8{
+.inst2,.inst4,.inst8,.inst10,.inst12{
 	float: right !important;
 }
 
-.malt,.dme,.fermentor,.yeast{
+.malt,.dme,.fermenter,.fermenter2,.beer{
 	float: left;
 }
 
-.pot,.hops,.immersion,.fermentor2{
+.pot,.hops,.immersion,.yeast,.trub{
 	float: right;
 }
 
@@ -122,24 +140,29 @@ body{
 
 @media screen and (min-width: 901px) and (max-width: 1100px){
 
-.beer-instructions{
-	width: 900px;
+body{
+	width: 100%;
 	margin: 0 auto;
 }
 
-.inst1,.inst3,.inst5,.inst7,.inst9{
+.beer-instructions{
+	width: 100%;
+	margin: 0 auto;
+}
+
+.inst1,.inst3,.inst5,.inst7,.inst9,.inst11{
 	float: left !important;
 }
 
-.inst2,.inst4,.inst6,.inst8{
+.inst2,.inst4,.inst6,.inst8,.inst10,.inst12{
 	float: right !important;
 }
 
-.malt,.dme,.fermentor,.yeast{
+.malt,.dme,.fermenter,.fermenter2,.beer{
 	float: left;
 }
 
-.pot,.hops,.immersion,.fermentor2{
+.pot,.hops,.immersion,.yeast,.trub{
 	float: right;
 }
 .russel-wilson-quote h3{
@@ -149,24 +172,29 @@ body{
 }
 @media screen and (min-width: 1101px) and (max-width: 1300px){
 
+body{
+	width: 100%;
+	margin: 0 auto;
+}
+
 .beer-instructions{
 	width: 900px;
 	margin: 0 auto;
 }
 
-.inst1,.inst3,.inst5,.inst7,.inst9{
+.inst1,.inst3,.inst5,.inst7,.inst9,.inst11{
 	float: left !important;
 }
 
-.inst2,.inst4,.inst6,.inst8{
+.inst2,.inst4,.inst6,.inst8,.inst10,.inst12{
 	float: right !important;
 }
 
-.malt,.dme,.fermentor,.yeast{
+.malt,.dme,.fermenter,.fermenter2,.beer{
 	float: left;
 }
 
-.pot,.hops,.immersion,.fermentor2{
+.pot,.hops,.immersion,.yeast,.trub{
 	float: right;
 }
 
@@ -178,24 +206,29 @@ body{
 
 @media screen and (min-width: 1301px) and (max-width: 1500px){
 
+body{
+	width: 100%;
+	margin: 0 auto;
+}
+
 .beer-instructions{
 	width: 900px;
 	margin: 0 auto;
 }
 
-.inst1,.inst3,.inst5,.inst7,.inst9{
+.inst1,.inst3,.inst5,.inst7,.inst9,.inst11{
 	float: left !important;
 }
 
-.inst2,.inst4,.inst6,.inst8{
+.inst2,.inst4,.inst6,.inst8,.inst10,.inst12{
 	float: right !important;
 }
 
-.malt,.dme,.fermentor,.yeast{
+.malt,.dme,.fermenter,.fermenter2,.beer{
 	float: left;
 }
 
-.pot,.hops,.immersion,.fermentor2{
+.pot,.hops,.immersion,.yeast,.trub{
 	float: right;
 }
 
@@ -207,23 +240,28 @@ body{
 
 @media screen and (min-width: 1501px) and (max-width: 1700px){
 
+body{
+	width: 100%;
+	margin: 0 auto;
+}
+
 .beer-instructions{
 	width: 900px;
 	margin: 0 auto;
 }
-.inst1,.inst3,.inst5,.inst7,.inst9{
+.inst1,.inst3,.inst5,.inst7,.inst9,.inst11{
 	float: left !important;
 }
 
-.inst2,.inst4,.inst6,.inst8{
+.inst2,.inst4,.inst6,.inst8,.inst10,.inst12{
 	float: right !important;
 }
 
-.malt,.dme,.fermentor,.yeast{
+.malt,.dme,.fermenter,.fermenter2,.beer{
 	float: left;
 }
 
-.pot,.hops,.immersion,.fermentor2{
+.pot,.hops,.immersion,.yeast,.trub{
 	float: right;
 }
 
@@ -234,23 +272,29 @@ body{
 }
 
 @media screen (min-width: 1701px){
+
+body{
+	width: 100%;
+	margin: 0 auto;
+}
+
 .beer-instructions{
 	width: 900px;
 	margin: 0 auto;
 }
-.inst1,.inst3,.inst5,.inst7,.inst9{
+.inst1,.inst3,.inst5,.inst7,.inst9,.inst11{
 	float: left !important;
 }
 
-.inst2,.inst4,.inst6,.inst8{
+.inst2,.inst4,.inst6,.inst8,.inst10,.inst12{
 	float: right !important;
 }
 
-.malt,.dme,.fermentor,.yeast{
+.malt,.dme,.fermenter,.fermenter2,.beer{
 	float: left;
 }
 
-.pot,.hops,.immersion,.fermentor2{
+.pot,.hops,.immersion,.yeast,.trub{
 	float: right;
 }
 

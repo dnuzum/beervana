@@ -126,19 +126,27 @@ app.controller("HomeCtrl", ["$scope", function($scope){
   };
   $scope.elementIn2 = function($el) {
     $el.css('visibility', 'visible');
-    $el.addClass('animated fadeInDownBig'); // this example leverages animate.css classes
+    $el.addClass('animated fadeInRightBig'); // this example leverages animate.css classes
   };
    $scope.elementOut2 = function($el) {
+    $el.css('visibility', 'hidden');
+    $el.removeClass('animated fadeInRightBig'); // this example leverages animate.css classes
+  };
+  $scope.elementIn3 = function($el) {
+    $el.css('visibility', 'visible');
+    $el.addClass('animated fadeInDownBig'); // this example leverages animate.css classes
+  };
+   $scope.elementOut3 = function($el) {
     $el.css('visibility', 'hidden');
     $el.removeClass('animated fadeInDownBig'); // this example leverages animate.css classes
   };
   $scope.animateElementIn = function($el) {
     $el.css('visibility', 'visible');
-    $el.addClass('animated fadeInDownBig'); // this example leverages animate.css classes
+    $el.addClass('animated fadeInLeftBig'); // this example leverages animate.css classes
   };
   $scope.animateElementOut = function($el) {
     $el.css('visibility', 'hidden');
-    $el.removeClass('animated fadeInDownBig'); // this example leverages animate.css classes
+    $el.removeClass('animated fadeInLeftBig'); // this example leverages animate.css classes
   };
 
 }])
