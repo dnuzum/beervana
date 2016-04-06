@@ -13,10 +13,15 @@ app.config([
       templateUrl: 'app/views/home.html',
       controller: 'HomeCtrl'
     })
-    .state('search', {
-      url: '/search',
+    .state('beerSearch', {
+      url: '/searchbeer',
       templateUrl: 'app/views/beerSearch.html',
-      controller: 'SearchCtrl'
+      controller: 'SearchBeerCtrl'
+    })
+    .state('brewerySearch', {
+      url: '/searchbrewery',
+      templateUrl: 'app/views/brewerySearch.html',
+      controller: 'SearchBreweryCtrl'
     })
     .state('signup', {
       url: '/signup',
@@ -27,6 +32,10 @@ app.config([
       url: '/login',
       templateUrl: 'app/views/userLogin.html',
       controller: 'LoginCtrl'
+    })
+    .state('faves', {
+      url: '/favorites',
+      templateUrl: 'app/views/userFaves.html'
     })
     .state('404', {
       url: '/404',

@@ -8,9 +8,12 @@
 
 
 	<div class="well" style="visibility: hidden" ng-repeat="beer in beers track by beer.id" when-visible="animateElementIn" when-not-visible="animateElementOut">
-	  <h4>{{beer.name}}</h4>
+	  <h4>{{beer.name}}</h4><img ng-src="{{beer.labels.medium}}">
 	  <p>Description: {{beer.description || 'not available'}}</p>
 	  <p>Style: {{beer.style.name}}</p>
+    <form>
+      <button type="button" class="btn btn-primary" ng-click="beerFave({id: beer.id, name: beer.name})">Favorite</button>
+    </form>
 	</div>
 
 </div>

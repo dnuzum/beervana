@@ -45,6 +45,15 @@ app.get('/api/beers', function(req, res) {
   });
 });
 
+app.get('/api/brewerys', function(req, res) {
+  var key = process.env.BEER_API_KEY;
+  var searchTerm = req.query.q
+  request('https://api.brewerydb.com/v2/search?q='+searchTerm+'&type=brewery&key='+key, function(err, response, data) {
+    console.log(JSON.parse(data).data)
+    res.send(JSON.parse(data).data)
+  });
+});
+
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'public/index.html'));
 });

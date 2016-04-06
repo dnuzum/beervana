@@ -16,6 +16,30 @@ router.route('/')
     });
   });
 
+router.post('/addBeer', function(req, res) {
+  var userId = req.user._doc._id;
+  User.findById(userId, function(err, user) {
+    console.log(user)
+    user.beers.push(req.body)
+    user.save(function(err) {
+      if (err) return handleError(err)
+        console.log('Success!');
+    });
+  });
+});
+
+router.post('/addBrewery', function(req, res) {
+  var userId = req.user._doc._id;
+  User.findById(userId, function(err, user) {
+    console.log(user)
+    user.brewerys.push(req.body)
+    user.save(function(err) {
+      if (err) return handleError(err)
+        console.log('Success!');
+    });
+  });
+});
+
 router.get('/:id', function(req, res) {
   User.findById(req.params.id, function(err, user) {
     if (err) return res.status(500).send(err);

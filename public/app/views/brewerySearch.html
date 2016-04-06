@@ -1,0 +1,19 @@
+<div>
+  <form class="form" ng-submit="search()">
+    <div class="form-group">
+      <input type="text" placeholder="Search for Breweries" id="search" class="form-control" ng-model="searchTerm">
+      <button type="submit" ng-submit="search()" class="btn btn-primary">Search</button>
+    </div>
+  </form>
+
+
+  <div class="well" style="visibility: hidden" ng-repeat="brewery in brewerys track by brewery.id" when-visible="animateElementIn" when-not-visible="animateElementOut">
+    <h4>{{brewery.name}}</h4><img ng-src="{{brewery.images.squareMedium}}">
+    <p>Description: {{brewery.description || 'Not Available'}}</p>
+    <p>Website: <a ng-href="{{brewery.website || 'Not Available'}}">{{brewery.website || 'Not Available' }}</a></p>
+    <form>
+      <button type="button" class="btn btn-primary" ng-click="breweryFave({id: brewery.id, name: brewery.name})">Favorite</button>
+    </form>
+  </div>
+
+</div>

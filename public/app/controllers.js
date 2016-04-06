@@ -3,8 +3,8 @@ angular.module('BeerCtrls', ['BeerServices'])
 
 }])
 
-app.controller('SearchCtrl', ['$scope', '$http','$rootScope', '$document', function($scope, $http, $rootScope, $document) {
-  console.log("hi");
+app.controller('SearchBeerCtrl', ['$scope', '$http','$rootScope', '$document', function($scope, $http, $rootScope, $document) {
+  // console.log("hi");
   $scope.searchTerm = '';
   $scope.beers = [];
 
@@ -34,6 +34,85 @@ app.controller('SearchCtrl', ['$scope', '$http','$rootScope', '$document', funct
     $el.css('visibility', 'hidden');
     $el.removeClass('animated fadeInUp'); // this example leverages animate.css classes
   };
+
+  $scope.beerFave = function(beer) {
+    console.log(beer)
+    $http.post('/api/users/addBeer', beer).then(function success(res) {
+      $location.path('');
+    }, function error(res) {
+      console.log(res);
+    });
+  }
+}]);
+
+app.controller("HomeCtrl", ["$scope", function($scope){
+  $scope.elementIn = function($el) {
+    $el.css('visibility', 'visible');
+    $el.addClass('animated fadeIn'); // this example leverages animate.css classes
+  };
+   $scope.elementOut = function($el) {
+    $el.css('visibility', 'hidden');
+    $el.removeClass('animated fadeIn'); // this example leverages animate.css classes
+  };
+  $scope.elementIn2 = function($el) {
+    $el.css('visibility', 'visible');
+    $el.addClass('animated fadeInDownBig'); // this example leverages animate.css classes
+  };
+   $scope.elementOut2 = function($el) {
+    $el.css('visibility', 'hidden');
+    $el.removeClass('animated fadeInDownBig'); // this example leverages animate.css classes
+  };
+  $scope.animateElementIn = function($el) {
+    $el.css('visibility', 'visible');
+    $el.addClass('animated fadeInDownBig'); // this example leverages animate.css classes
+  };
+  $scope.animateElementOut = function($el) {
+    $el.css('visibility', 'hidden');
+    $el.removeClass('animated fadeInDownBig'); // this example leverages animate.css classes
+  };
+
+}])
+
+app.controller('SearchBreweryCtrl', ['$scope', '$http','$rootScope', '$document', function($scope, $http, $rootScope, $document) {
+  // console.log("hi");
+  $scope.searchTerm = '';
+  $scope.brewerys = [];
+
+  $scope.search = function() {
+    var req = {
+      url: '/api/brewerys',
+      method: 'GET',
+      params: {
+        q : $scope.searchTerm,
+      }
+    };
+    $http(req).then(function success(res) {
+      $scope.brewerys = res.data;
+      console.log($scope.brewerys);
+    }, function error(res) {
+      console.log(res);
+    });
+  }
+
+  $scope.animateElementIn = function($el) {
+    console.log($el['0'])
+    $el.css('visibility', 'visible');
+    $el.addClass('animated fadeInUp'); // this example leverages animate.css classes
+  };
+
+  $scope.animateElementOut = function($el) {
+    $el.css('visibility', 'hidden');
+    $el.removeClass('animated fadeInUp'); // this example leverages animate.css classes
+  };
+
+  $scope.breweryFave = function(brewery) {
+    console.log(brewery)
+    $http.post('/api/users/addBrewery', brewery).then(function success(res) {
+      $location.path('');
+    }, function error(res) {
+      console.log(res);
+    });
+  }
 }]);
 
 app.controller("HomeCtrl", ["$scope", function($scope){
@@ -102,5 +181,4 @@ app.controller('LoginCtrl', ['$scope', '$http', '$location', 'Auth', function($s
       console.log(res);
     })
   }
-}]);
-
+}])
