@@ -1,29 +1,96 @@
-<div class="container">
-	<div class="logo-container">
-  		<img class="logo" src="./images/beervana-transparent.png"/> 
-  	</div>
-
-	<div class="russel-wilson-quote">
-		<h3>"The seperation is in the preperation"<span>- Russel Wilson</span></h3>
-	</div>
-
-	<div>
-		<h3 class="scroll">Scroll Down</h3>
-	</div>
-
-	<section class="beer-instructions" >
-		
-		<p class="well col-xs-10">
-			Add Malted barley and soak it in hot water to release the malt sugars(60 degrees).
-		</p>
-
-		<img src="../images/malt.png" when-visible="animateElementIn" />
-
-		<div >
-			<img src="../images/pot.png"/>
-		</div>
-
-	</section>
-
-
+<div class="logo-container">
+		<img class="logo" src="./images/beervana-transparent.png" style="visibility: hidden" when-visible="elementIn" when-not-visible="elementOut"/>
 </div>
+
+<div class="russel-wilson-quote" style="visibility: hidden" when-visible="elementIn" when-not-visible="elementOut">
+	<h3>"The seperation is in the preperation"<span>- Russel Wilson</span></h3>
+	<div class="scroll-container">
+		<h3 class="scroll">Scroll down to learn how to brew</h3>
+	</div>	
+</div>
+
+
+
+<section class="beer-instructions" >
+
+	<div class="pot-container col-xs-12 " style="visibility: hidden" when-visible="elementIn2" when-not-visible="elementOut2">
+		<p class="well instructions inst1 col-xs-12 col-sm-6">
+			Fill 5 gallon kettle up with 3 gallons of water and heat it up to 180 degrees.
+		</p>
+		<img src="../images/pot.png" class="pot" />
+	</div>
+
+	<div class="malt-container col-xs-12" style="visibility: hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
+		<p class="well col-xs-12 col-sm-6 instructions inst2" >
+			Hold kettle to 180 degress. Add your specialty grains for aroma and color into stepping bag and stepp grains for 20-30 minutes.
+		</p>
+		<img src="../images/wort.png" class="malt"/>
+	</div>
+
+	<!-- <div class="wort-container col-xs-12">
+		 class="wort" style="visibility: hidden" when-visible="animateElementIn" when-not-visible="animateElementOut" />
+	</div> -->
+
+	<div class="wort-container col-xs-12" style="visibility: hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
+		<p class="well col-xs-12 col-sm-6 instructions inst3" >
+		Pull out specialty grains once they have been steeping for 20-30 minutes. You have now created what is called "wort". Bring wort up to boiling point (220-235 degrees).
+		</p>
+		<img src="../images/wort2.png" class="wort"/>
+	</div>
+
+	<div class="dme-container col-xs-12" style="visibility: hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
+		<p class="well col-xs-12 col-sm-6 instructions inst4" >
+		Now it is time to add your DME(Dry Malt Extract) or LME(Liquid Malt Extract, reduce thickness of LME by placing bottle in hot water). DME and LME are sugar/syrups that you add for the yeast to feed on. Pour either DME or LME into wart while CONTINUOUSLY STIRRING. Boil wort for 60 minutes(be sure to start a timer).
+		</p>
+		<img src="../images/DME.png" class="dme"/>
+	</div>
+
+	<div class="hops-container col-xs-12" style="visibility: hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
+		<p class="well col-xs-12 col-sm-6 instructions inst5" >
+		After 30 minutes of boiling it is now time to add hops (flavoring hops) pellet or leaf form. Add bittering hops at minute 55.
+		</p>
+		<img src="../images/hops.png" class="hops" />
+	</div>
+
+	<div class="fermentor-container col-xs-12" style="visibility: hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
+		<p class="well col-xs-12 col-sm-6 instructions inst6" >
+		After 60 minutes of boiling reduce the temperature of the wort to 70-80 degrees by transfering wort into the fermentor(make sure to use a screen) and then cool either by immersion cooler or by cooling plate.
+		</p>
+		<img src="../images/fermenter.png" class="fermenter"/>
+	</div>
+
+	<div class="hydrometer-container col-xs-12" style="visibility: hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
+		<p class="well col-xs-12 col-sm-6 instructions inst7" >
+		After cooled, top off fermenter to 5 gallons with DISTILLED water. Take sample of wart and find the original gravity by using hydrometer(write down number for later use).
+		</p>
+		<img src="../images/hydrometer.png" class="hydrometer"  />
+	</div>
+
+	<div class="yeast-container col-xs-12" style="visibility: hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
+		
+		<p class="well col-xs-12 col-sm-6 instructions inst8">
+		Its time to pitch your yeast, sprinkle yeast on top of the wort whether you are using dry or liquid yeast(DO NOT STIR).
+		</p>
+		<img src="../images/pitching-yeast.png" class="yeast"  />
+	</div>
+
+	<div class="fermenter-container col-xs-12 " style="visibility: hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
+		<p class="well col-xs-12 col-sm-6 instructions inst9" >
+		After pitching the yeast, put lid on fermenter, set air lock to allow air to go in. The primary fermentation has now begun which will take 10-14 days
+		</p>
+		<img src="../images/fermenter2.png" class="fermenter2" />
+	</div>
+
+	
+
+
+
+	 
+
+
+
+	
+
+</section>
+
+
