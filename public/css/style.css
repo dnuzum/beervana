@@ -7,11 +7,39 @@ body{
 	background-repeat: no-repeat;
 }
 
-.title{
-	font-family: 'Old Standard TT', serif;
-	margin: 2% auto;
+.container{
+	width: 100%;
+	padding: 0;
+}
+
+.russel-wilson-quote span{
+	float: right;
+	margin-right: 2%;
+}
+
+.russel-wilson-quote h3{
+	background-color: rgba(0,0,0,.5);
+	color: #fff;
+	font-size: 1.5em;
+	font-weight: bold;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.scroll{
+	font-weight: bold;
+	color: #fff;
 	text-align: center;
-	letter-spacing: 1px;
+}
+
+.logo{
+	width: 400px;
+	height: 308px;
+}
+
+.logo-container{
+	text-align: center;
+	margin: 0 0 0 0;
 }
 
 .navbar-brand{
