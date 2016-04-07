@@ -1,3 +1,33 @@
+/*
+Project Name: Beervana
+Client: You
+Author: Derek Nuzum and Jonathan Stevenson
+Developers @GA in Seattle
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+
 body{
 	margin-top: 50px;
 	background-image: url("../images/SeattleApp.jpeg");
@@ -106,6 +136,57 @@ body{
 	padding: 1% !important;
 	margin: 0 auto !important;
 	margin-top: 5%;
+}
+
+.beer-search{
+	width: 70%;
+	margin: 0 auto;
+	font-family: 'Old Standard TT', serif !important;
+	min-height: 150px !important;
+	background-color: rgba(255,255,255,.95) !important;
+}
+
+.beer-search:hover{
+	font-size: 1em;
+}
+
+.beer-style{
+	text-align: center;
+	font-size: 1.3em;
+	width: 50%;
+	margin: 2% auto;
+	font-weight: bold;
+}
+
+.description{
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+.beer-description{
+	font-size: 1.2em;
+	text-align: center;
+	width: 50%;
+	margin: 0 auto;
+}
+
+
+.beer-label{
+	width: 100px;
+	height: 100px;
+	float: right;
+	background-image: url("../images/beervana-black.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+}
+
+.beer-title{
+	float: left;
+	max-width: 180px;
+	font-weight: bold;
+	font-size: 1.6em;
+	text-decoration: underline; 
 }
 
 @media screen and (min-width: 768px) and (max-width: 900px){
