@@ -14,7 +14,7 @@
 	  <p class="beer-style">Style: {{beer.style.name}}</p>
     <p>IBU: {{beer.ibu}}</p>
     <p>ABV: {{beer.abv}}</p>
-    <p>Brewed by: {{beer.breweries.name}}</p>
+    <p>Brewed by: {{beer.breweries[0].name}}</p>
     <form>
       <button type="button" class="btn btn-primary" ng-click="beerFave({id: beer.id, name: beer.name})">Favorite</button>
     </form>

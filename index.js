@@ -39,7 +39,7 @@ app.post('/api/auth', function(req, res) {
 app.get('/api/beers', function(req, res) {
   var key = process.env.BEER_API_KEY;
   var searchTerm = req.query.q
-  request('https://api.brewerydb.com/v2/search?q='+searchTerm+'&type=beer&withBreweries=Y&key='+key, function(err, response, data) {
+  request('https://api.brewerydb.com/v2/search?q='+searchTerm+'&type=beer&withBreweries=y&key='+key, function(err, response, data) {
     console.log(JSON.parse(data).data)
     res.send(JSON.parse(data).data)
   });
