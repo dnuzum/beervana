@@ -19,11 +19,11 @@ router.route('/')
 router.post('/addBeer', function(req, res) {
   var userId = req.user._doc._id;
   User.findById(userId, function(err, user) {
-    console.log(user)
+    // console.log(user)
     user.beers.push(req.body)
     user.save(function(err) {
       if (err) return handleError(err)
-        console.log('Success!');
+        // console.log('Success!');
     });
   });
 });
@@ -31,12 +31,20 @@ router.post('/addBeer', function(req, res) {
 router.post('/addBrewery', function(req, res) {
   var userId = req.user._doc._id;
   User.findById(userId, function(err, user) {
-    console.log(user)
+    // console.log(user)
     user.brewerys.push(req.body)
     user.save(function(err) {
       if (err) return handleError(err)
-        console.log('Success!');
+        // console.log('Success!');
     });
+  });
+});
+
+router.get('/userFaves', function(req, res) {
+  var userId = req.user._doc._id;
+  User.findById(userId, function(err, user) {
+    if (err) return handleError(err)
+      res.send(user)
   });
 });
 

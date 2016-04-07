@@ -20,7 +20,7 @@ mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/beervana');
 
 // app.use('/api/beers', expressJWT({secret: secret}));
 app.use('/api/users', expressJWT({secret: secret})
-.unless({path: ['/api/users'], method: 'post'}));
+.unless({path: ['/api/users'], method: 'post'}))
 
 app.use('/api/users', require('./controllers/users'));
 
