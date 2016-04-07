@@ -8,16 +8,23 @@
 
 
 	<div class="well beer-search" style="visibility: hidden" ng-repeat="beer in beers track by beer.id" when-visible="animateElementIn" when-not-visible="animateElementOut">
-	  <h4 class="beer-title clearfix">{{beer.name}}</h4>
-    <img class="beer-label" ng-src="{{beer.labels.medium }}">
-	  <p class="beer-description"><span class="description">Description:</span></br> {{beer.description || 'not available'}}</p>
-	  <p class="beer-style">Style: {{beer.style.name}}</p>
-    <p>IBU: {{beer.ibu}}</p>
-    <p>ABV: {{beer.abv}}</p>
-    <p>Brewed by: {{beer.breweries.name}}</p>
-    <form>
-      <button type="button" class="btn btn-primary" ng-click="beerFave({id: beer.id, name: beer.name})">Favorite</button>
-    </form>
+  	<div class="beer-container">
+      <ul class="beer-list"> 
+        <h1 class="beer-title">{{beer.name}} </br></h1>
+        <li><h3 class="brewery">Brewed by: {{beer.breweries.name}}</br></h3></li>
+        <li><h4>IBU: {{beer.ibu || 'n/a'}} </br></h4></li>
+        <li><h4>ABV: {{beer.abv || 'n/a'}}</h4></li>
+      </ul>
+
+      <img class="beer-label" ng-src="{{beer.labels.medium }}">
+  	  <p class="beer-description"><span class="description">Description:</span></br> {{beer.description || 'n/a'}}</p>
+  	  <p class="beer-style">Style:</br> {{beer.style.name}}</p>
+      
+     
+      <form>
+        <button type="button" class="btn btn-primary fav-btn" ng-click="beerFave({id: beer.id, name: beer.name})">Favorite</button>
+      </form>
+    </div>
 	</div>
 
 </div>
