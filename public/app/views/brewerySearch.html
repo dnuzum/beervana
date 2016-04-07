@@ -6,14 +6,15 @@
     </div>
   </form>
 
-
-  <div class="well" style="visibility: hidden" ng-repeat="brewery in brewerys track by brewery.id" when-visible="animateElementIn" when-not-visible="animateElementOut">
-    <h4>{{brewery.name}}</h4><img ng-src="{{brewery.images.squareMedium}}">
-    <p>Description: {{brewery.description || 'Not Available'}}</p>
-    <p>Website: <a ng-href="{{brewery.website || 'Not Available'}}">{{brewery.website || 'Not Available' }}</a></p>
-    <form>
-      <button type="button" class="btn btn-primary" ng-click="breweryFave({id: brewery.id, name: brewery.name})">Favorite</button>
-    </form>
+  <div class="brewery-container">
+    <div class="well brewery" style="visibility: hidden" ng-repeat="brewery in brewerys track by brewery.id" when-visible="animateElementIn" when-not-visible="animateElementOut">
+      <h4 class="brewery-title">{{brewery.name}}</h4>
+      <img class="brewery-image" ng-src="{{brewery.images.squareMedium}}"/>
+      <p><span class="brewery-description">Description:</br></span> {{brewery.description || 'Not Available'}}</p>
+      <p>Website: <a ng-href="{{brewery.website || 'Not Available'}}">{{brewery.website || 'Not Available' }}</a></p>
+      <form>
+        <button type="button" class="btn btn-primary fav" ng-click="breweryFave({id: brewery.id, name: brewery.name})">Favorite</button>
+      </form>
+    </div>
   </div>
-
 </div>
