@@ -151,6 +151,19 @@ app.controller("HomeCtrl", ["$scope", function($scope){
 
 }])
 
+app.controller('FaveCtrl', ['$scope', '$http', function($scope, $http){
+  $scope.userBeers = [];
+  $scope.userBrewerys = [];
+  $http.get('/api/users/userFaves').then(function success(res) {
+    console.log(res.data.beers)
+    $scope.userBeers = res.data.beers
+    console.log(res.data.brewerys)
+    $scope.userBrewerys = res.data.brewerys
+  }, function error(res) {
+    res.send(err)
+  })
+}])
+
 app.controller('NavCtrl', ['$scope', 'Auth', '$state', function($scope, Auth, $state) {
   $scope.Auth = Auth;
 
@@ -184,7 +197,7 @@ app.controller('LoginCtrl', ['$scope', '$http', '$location', 'Auth', function($s
     //to implement
     $http.post('/api/auth', $scope.user).then(function success(res) {
       Auth.saveToken(res.data.token);
-      $location.path('/search');
+      $location.path('/searchbeer');
     }, function error(res) {
       console.log(res);
     })

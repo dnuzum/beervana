@@ -1,4 +1,8 @@
-<div class="well">
-  {{user.name}}
-  Faves go here
+<h3>Your Favorite Beers:</h3>
+<div class="well" ng-repeat="userBeer in userBeers track by userBeer.id">
+  {{userBeer.name}}
+</div>
+<h3>Your Favorite Breweries:</h3>
+<div class="well" ng-repeat="userBrewery in userBrewerys track by userBrewery.id">
+  {{userBrewery.name}}
 </div>

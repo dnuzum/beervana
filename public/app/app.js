@@ -35,7 +35,12 @@ app.config([
     })
     .state('faves', {
       url: '/favorites',
-      templateUrl: 'app/views/userFaves.html'
+      templateUrl: 'app/views/userFaves.html',
+      controller: 'FaveCtrl'
+    })
+    .state('about', {
+      url: '/about',
+      templateUrl: 'app/views/about.html'
     })
     .state('404', {
       url: '/404',
