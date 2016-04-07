@@ -36,6 +36,7 @@ body{
 	background-position: center;
 	background-repeat: no-repeat;
 	width: 100%;
+	overflow-x: hidden;
 }
 
 .container{
@@ -48,10 +49,11 @@ body{
 	margin-right: 2%;
 }
 
-.russel-wilson-quote h3{
+.russel-wilson-quote h1{
 	color: #fff;
 	text-align: center;
 	font-size: 1.5em;
+	margin-top: 2%;
 	font-weight: bold;
 	width: 75%;
 	margin: 0 auto;
@@ -65,7 +67,7 @@ body{
 .scroll{
 	font-weight: bold;
 	color: #fff;
-	font-size: 1em;
+	font-size: 1.5em;
 	text-align: center;
 }
 
@@ -103,6 +105,7 @@ body{
 	margin: 0 0 0 0;
 }
 
+
 .navbar-brand{
 	font-family: 'Old Standard TT', serif !important;
 }
@@ -113,8 +116,18 @@ body{
 
 .beer-instructions{
 	width: 100%;
-	margin: 0 auto;
+	margin: 5% auto;
 	padding: 0;
+}
+
+.instruction-container{
+	width: 100%;
+	margin: 500px auto;
+	margin-bottom: 0;
+	padding: 1% !important;
+	background-color: rgba(255,255,255,.85) !important;
+	text-align: center;
+	text-decoration: underline;
 }
 
 .instructions{
@@ -123,9 +136,9 @@ body{
 	font-size: 1.5em;
 	font-weight: bold;
 	padding: 1% !important;
-	background-color: rgba(255,255,255,.9) !important;
+	background-color: rgba(255,255,255,.85) !important;
 	width: 50%;
-	border: 2px solid #000 !important;
+	border: 5px solid rgba(0,0,0,.1) !important;
 }
 
 .enjoy{
@@ -134,15 +147,550 @@ body{
 	text-align: center;
 	font-weight: bold;
 	padding: 1% !important;
-	margin: 0 auto !important;
-	margin-top: 5%;
+	margin: 5% auto !important;
+	margin-bottom: 200px;
 }
 
 .beer-search{
+	width: 90%;
+	margin: 0 auto;
+	font-family: 'Old Standard TT', serif !important;
+	min-height: 200px !important;
+	background-color: rgba(255,255,255,.95) !important;
+}
+
+.beer-search:hover{
+	font-size: 1em;
+}
+
+.beer-style{
+	text-align: left;
+	font-size: 1.3em;
+	width: 50%;
+	font-weight: bold;
+}
+
+.description{
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+.beer-description{
+    font-size: 1.2em;
+    text-align: center;
+    width: 80%;
+    margin: 150px auto;
+    margin-bottom: 2%;
+}
+
+
+.beer-label{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	right: 2%;
+	top: 3%;
+	background-image: url("../images/beervana-black.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+}
+
+.beer-list{
+	position: absolute;
+    left: -5%;
+    top: 4%;
+	list-style-type: none;
+	max-width: 150px;
+}
+
+.beer-list li{
+	float: left;
+}
+
+
+.beer-title{
+	width: 180px;
+	margin-top: 0;
+	text-align: left;
+	display: inline-block;
+	float: left;
+	clear: both;
+	font-size: 1.6em !important;
+	font-weight: bold !important;
+	text-decoration: underline; 
+}
+
+.brewery{
+	float: left;
+	font-size: 1.4em;
+	margin-top: 1%;
+}
+
+.fav-btn{
+	position: absolute;
+    bottom: 1.5%;
+    right: 3%;
+}
+
+.beer-container{
+	padding: 2%;
+}
+
+.brewery-title{
+	font-size: 2em;
+	text-decoration: underline;
+	text-align: center;
+	text-shadow: 2px 2px rgba(255,255,255,.5);
+}
+
+.brewery-image{
+	width: 50%;
+	float: right;
+}
+
+.brewery{
+	width: 100%;
+	margin: 5% auto;
+}
+
+.brewery-container{
+	width: 90%;
+	margin: 0 auto;
+	font-family: 'Old Standard TT', serif !important;
+}
+
+.brewery-description{
+	font-weight: bold;
+	text-decoration: underline;
+	text-align: center;
+}
+
+.brewery-description::first-line{
+	margin-left: 5%;
+}
+
+.fav{
+	float: right;
+}
+
+@media screen and (min-width: 650px) and (max-width: 778px){
+
+body{
+	width: 100%;
+	margin: 0 auto;
+}
+
+.brewery-image{
+	width: 20%;
+	float: right;
+}
+
+.brewery{
+	margin: 5% auto;
+}
+
+.fav{
+	position: absolute;
+	bottom: 2%;
+	right: 2%;
+}
+
+
+.russel-wilson-quote span{
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.russel-wilson-quote h1{
+	font-size: 2em;
+	color: #fff;
+	font-weight: bold;
+}
+
+.beer-style{
+	text-align: center;
+	margin: 2% auto;
+}
+
+.beer-description{
+	width: 50%;
+	margin: 0 auto;
+}
+
+.beer-label{
+	float: right;
+	margin-top: 1%;
+}
+
+.beer-list{
+	position: absolute;
+	top: 4%;
+	display: block;
+	max-width: 150px;
+	list-style-type: none;
+}
+
+
+.fav-btn{
+	position: absolute;
+    bottom: 3%;
+    right: 1%;
+}
+
+.instruction-container{
+	width: 70%;
+}
+
+.fav{
+	float: left;
+}
+
+}
+
+@media screen and (min-width: 770px) and (max-width: 901px){
+
+body{
+	width: 100%;
+	margin: 0 auto;
+}
+
+.russel-wilson-quote span{
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.russel-wilson-quote h1{
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.beer-instructions{
+	width: 100%;
+	margin: 5% auto;
+}
+
+.inst1,.inst3,.inst5,.inst7,.inst9,.inst11{
+	float: left !important;
+	background-color: #000;
+}
+
+.inst2,.inst4,.inst8,.inst6,.inst10,.inst12{
+	float: right !important;
+}
+
+.malt,.dme,.fermenter,.fermenter2,.beer{
+	float: left ;
+}
+
+.pot,.hops,.immersion,.yeast,.trub{
+	float: right;
+}
+
+.brewery-image{
+	width: 20%;
+	float: right;
+}
+
+.brewery{
+	width: 100%;
+	margin: 5% auto;
+}
+
+.fav{
+	float: left;
+}
+
+}
+
+@media screen and (min-width: 901px) and (max-width: 1100px){
+
+body{
+	width: 100%;
+	margin: 0 auto;
+}
+
+.brewery-container{
+	width: 900px;
+}
+
+.russel-wilson-quote span{
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.russel-wilson-quote h1{
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.beer-instructions{
+	width: 100%;
+	margin: 5% auto;
+}
+
+.inst1,.inst3,.inst5,.inst7,.inst9,.inst11{
+	float: left !important;
+}
+
+.inst2,.inst4,.inst6,.inst8,.inst10,.inst12{
+	float: right !important;
+}
+
+.malt,.dme,.fermenter,.fermenter2,.beer{
+	float: left;
+}
+
+.pot,.hops,.immersion,.yeast,.trub{
+	float: right;
+}
+
+
+.beer-style{
+	text-align: center;
+	margin: 2% auto;
+}
+
+.beer-description{
+	width: 50%;
+	margin: 0 auto;
+}
+
+.beer-label{
+	float: right;
+	margin-top: 1%;
+}
+
+.beer-list{
+	margin-left: 2%;
+	display: block;
+	max-width: 150px;
+	list-style-type: none;
+}
+
+.beer-title{
+	width: 400px;
+}
+
+.fav-btn{
+	position: absolute;
+    bottom: 3%;
+    right: 2%;
+}
+
+.instruction-container{
+	width: 70%;
+}
+
+.brewery-image{
+	width: 20%;
+	float: right;
+}
+
+.fav{
+	float: left;
+}
+
+.brewery{
+	width: 100%;
+	margin: 5% auto;
+}
+
+
+}
+@media screen and (min-width: 1101px) and (max-width: 1300px){
+
+body{
+	width: 100%;
+	margin: 0 auto;
+}
+
+.brewery-container{
+	width: 900px;
+}
+
+.russel-wilson-quote span{
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.russel-wilson-quote h1{
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.beer-instructions{
+	width: 900px;
+	margin: 5% auto;
+}
+
+.inst1,.inst3,.inst5,.inst7,.inst9,.inst11{
+	float: left !important;
+}
+
+.inst2,.inst4,.inst6,.inst8,.inst10,.inst12{
+	float: right !important;
+}
+
+.malt,.dme,.fermenter,.fermenter2,.beer{
+	float: left;
+}
+
+.pot,.hops,.immersion,.yeast,.trub{
+	float: right;
+}
+
+
+.beer-style{
+	text-align: center;
+	margin: 2% auto;
+}
+
+.beer-description{
+	width: 50%;
+	margin: 0 auto;
+}
+
+.beer-label{
+	float: right;
+	margin-top: 1%;
+}
+
+.beer-list{
+	margin-left: 2%;
+	display: block;
+	max-width: 150px;
+	list-style-type: none;
+}
+
+.beer-title{
+	width: 400px;
+}
+
+.fav-btn{
+	position: absolute;
+    bottom: 3%;
+    right: 2%;
+}
+
+.instruction-container{
+	width: 70%;
+}
+
+.brewery-image{
+	width: 20%;
+	float: right;
+}
+
+.fav{
+	float: left;
+}
+
+.brewery{
+	width: 100%;
+	margin: 5% auto;
+}
+
+}
+
+@media screen and (min-width: 1301px) and (max-width: 1500px){
+
+body{
+	width: 100%;
+	margin: 0 auto;
+}
+
+.brewery-container{
+	width: 900px;
+}
+
+.beer-instructions{
+	width: 900px;
+	margin: 5% auto;
+}
+
+.inst1,.inst3,.inst5,.inst7,.inst9,.inst11{
+	float: left !important;
+}
+
+.inst2,.inst4,.inst6,.inst8,.inst10,.inst12{
+	float: right !important;
+}
+
+.malt,.dme,.fermenter,.fermenter2,.beer{
+	float: left;
+}
+
+.pot,.hops,.immersion,.yeast,.trub{
+	float: right;
+}
+
+.russel-wilson-quote span{
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.russel-wilson-quote h1{
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.beer-style{
+	text-align: center;
+	margin: 2% auto;
+}
+
+.beer-description{
+	width: 50%;
+	margin: 0 auto;
+}
+
+.beer-label{
+	float: right;
+	margin-top: 1%;
+}
+
+.beer-list{
+	margin-left: 2%;
+	display: block;
+	max-width: 150px;
+	list-style-type: none;
+}
+
+.beer-title{
+	width: 500px;
+}
+
+.fav-btn{
+	position: absolute;
+    bottom: 3%;
+    right: 2%;
+}
+
+.instruction-container{
+	width: 70%;
+}
+
+.brewery-image{
+	width: 20%;
+	float: right;
+}
+
+.fav{
+	float: left;
+}
+
+.brewery{
+	width: 100%;
+	margin: 5% auto;
+}
+
+
+/*.beer-search{
 	width: 70%;
 	margin: 0 auto;
 	font-family: 'Old Standard TT', serif !important;
-	min-height: 150px !important;
+	min-height: 200px !important;
 	background-color: rgba(255,255,255,.95) !important;
 }
 
@@ -181,141 +729,36 @@ body{
 
 }
 
-.beer-title{
+.beer-list{
 	float: left;
+	position: absolute;
+	bottom: 0;
+	left: 2%;
+	display: block;
 	max-width: 180px;
-	font-weight: bold;
+	list-style-type: none;
+}
+
+.beer-title{
+	max-width: 180px;
+	margin-top: 0;
+	float: left;
 	font-size: 1.6em;
+	font-weight: bold;
 	text-decoration: underline; 
 }
 
-@media screen and (min-width: 768px) and (max-width: 900px){
-
-body{
-	width: 100%;
-	margin: 0 auto;
-}
-
-.beer-instructions{
-	width: 100%;
-}
-
-.inst1,.inst3,.inst5,.inst6,.inst7,.inst9,.inst11{
-	float: left !important;
-	background-color: #000;
-}
-
-.inst2,.inst4,.inst8,.inst10,.inst12{
-	float: right !important;
-}
-
-.malt,.dme,.fermenter,.fermenter2,.beer{
+.brewery{
 	float: left;
+	font-size: 1.4em;
+	margin-top: 1%;
 }
 
-.pot,.hops,.immersion,.yeast,.trub{
-	float: right;
-}
-
-}
-
-@media screen and (min-width: 901px) and (max-width: 1100px){
-
-body{
-	width: 100%;
-	margin: 0 auto;
-}
-
-.beer-instructions{
-	width: 100%;
-	margin: 0 auto;
-}
-
-.inst1,.inst3,.inst5,.inst7,.inst9,.inst11{
-	float: left !important;
-}
-
-.inst2,.inst4,.inst6,.inst8,.inst10,.inst12{
-	float: right !important;
-}
-
-.malt,.dme,.fermenter,.fermenter2,.beer{
-	float: left;
-}
-
-.pot,.hops,.immersion,.yeast,.trub{
-	float: right;
-}
-.russel-wilson-quote h3{
-	width: 65%;
-}
-
-}
-@media screen and (min-width: 1101px) and (max-width: 1300px){
-
-body{
-	width: 100%;
-	margin: 0 auto;
-}
-
-.beer-instructions{
-	width: 900px;
-	margin: 0 auto;
-}
-
-.inst1,.inst3,.inst5,.inst7,.inst9,.inst11{
-	float: left !important;
-}
-
-.inst2,.inst4,.inst6,.inst8,.inst10,.inst12{
-	float: right !important;
-}
-
-.malt,.dme,.fermenter,.fermenter2,.beer{
-	float: left;
-}
-
-.pot,.hops,.immersion,.yeast,.trub{
-	float: right;
-}
-
-.russel-wilson-quote h3{
-	width: 47%;
-}
-
-}
-
-@media screen and (min-width: 1301px) and (max-width: 1500px){
-
-body{
-	width: 100%;
-	margin: 0 auto;
-}
-
-.beer-instructions{
-	width: 900px;
-	margin: 0 auto;
-}
-
-.inst1,.inst3,.inst5,.inst7,.inst9,.inst11{
-	float: left !important;
-}
-
-.inst2,.inst4,.inst6,.inst8,.inst10,.inst12{
-	float: right !important;
-}
-
-.malt,.dme,.fermenter,.fermenter2,.beer{
-	float: left;
-}
-
-.pot,.hops,.immersion,.yeast,.trub{
-	float: right;
-}
-
-.russel-wilson-quote h3{
-	width: 47%;
-}
+.fav-btn{
+	position: absolute;
+    bottom: 3%;
+    right: 1%;
+}*/
 
 }
 
@@ -326,9 +769,13 @@ body{
 	margin: 0 auto;
 }
 
+.brewery-container{
+	width: 900px;
+}
+
 .beer-instructions{
 	width: 900px;
-	margin: 0 auto;
+	margin: 5% auto;
 }
 .inst1,.inst3,.inst5,.inst7,.inst9,.inst11{
 	float: left !important;
@@ -346,9 +793,67 @@ body{
 	float: right;
 }
 
-.russel-wilson-quote h3{
-	width: 47%;
+
+.beer-style{
+	text-align: center;
+	margin: 2% auto;
 }
+
+.beer-description{
+	width: 50%;
+	margin: 0 auto;
+}
+
+.beer-label{
+	float: right;
+	margin-top: 1%;
+}
+
+.beer-list{
+	margin-left: 2%;
+	display: block;
+	max-width: 150px;
+	list-style-type: none;
+}
+
+.beer-title{
+	width: 400px;
+}
+
+.fav-btn{
+	position: absolute;
+    bottom: 3%;
+    right: 2%;
+}
+
+.russel-wilson-quote span{
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.russel-wilson-quote h1{
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.instruction-container{
+	width: 70%;
+}
+
+.brewery-image{
+	width: 20%;
+	float: right;
+}
+
+.fav{
+	float: left;
+}
+
+.brewery{
+	width: 100%;
+	margin: 0 auto;
+}
+
 
 }
 
@@ -359,9 +864,13 @@ body{
 	margin: 0 auto;
 }
 
+.brewery-container{
+	width: 900px;
+}
+
 .beer-instructions{
 	width: 900px;
-	margin: 0 auto;
+	margin: 5% auto;
 }
 .inst1,.inst3,.inst5,.inst7,.inst9,.inst11{
 	float: left !important;
@@ -382,5 +891,67 @@ body{
 .russel-wilson-quote h3{
 	width: 47%;
 }
+
+
+.beer-style{
+	text-align: center;
+	margin: 2% auto;
+}
+
+.beer-description{
+	width: 50%;
+	margin: 0 auto;
+}
+
+.beer-label{
+	float: right;
+	margin-top: 1%;
+}
+
+.beer-list{
+	margin-left: 2%;
+	display: block;
+	max-width: 150px;
+	list-style-type: none;
+}
+
+.beer-title{
+	width: 400px;
+}
+
+.fav-btn{
+	position: absolute;
+    bottom: 3%;
+    right: 2%;
+}
+
+.russel-wilson-quote span{
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.russel-wilson-quote h1{
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.instruction-container{
+	width: 70%;
+}
+
+.brewery-image{
+	width: 30%;
+	float: right;
+}
+
+.fav{
+	float: left;
+}
+
+.brewery{
+	width: 100%;
+	margin: 0 auto;
+}
+
 
 }
