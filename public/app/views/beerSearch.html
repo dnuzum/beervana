@@ -7,10 +7,11 @@
   </form>
 
 
-	<div class="well" style="visibility: hidden" ng-repeat="beer in beers track by beer.id" when-visible="animateElementIn" when-not-visible="animateElementOut">
-	  <h4>{{beer.name}}</h4><img ng-src="{{beer.labels.medium}}">
-	  <p>Description: {{beer.description || 'not available'}}</p>
-	  <p>Style: {{beer.style.name}}</p>
+	<div class="well beer-search" style="visibility: hidden" ng-repeat="beer in beers track by beer.id" when-visible="animateElementIn" when-not-visible="animateElementOut">
+	  <h4 class="beer-title clearfix">{{beer.name}}</h4>
+    <img class="beer-label" ng-src="{{beer.labels.medium }}">
+	  <p class="beer-description"><span class="description">Description:</span></br> {{beer.description || 'not available'}}</p>
+	  <p class="beer-style">Style: {{beer.style.name}}</p>
     <form>
       <button type="button" class="btn btn-primary" ng-click="beerFave({id: beer.id, name: beer.name})">Favorite</button>
     </form>
