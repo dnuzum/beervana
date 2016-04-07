@@ -18,9 +18,10 @@
       <li><a href='/searchbrewery'>Brewery Search</a></li>
       <li><a href="/signup" ng-hide="Auth.isLoggedIn()">Signup</a></li>
       <li><a href="/login" ng-hide="Auth.isLoggedIn()">Login</a></li>
+      <li><a ng-click="/favorites" ng-show="Auth.isLoggedIn()">Your Favorites</a></li>
       <li><a ng-click="logout()" ng-show="Auth.isLoggedIn()">Logout</a></li>
     </ul>
-      <form class="navbar-form navbar-left" role="search">
+      <!-- <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
@@ -36,7 +37,7 @@
             <li><a href="#">Separated link</a></li>
           </ul>
         </li>
-      </ul>
+      </ul> -->
     </div><!-- /.navbar-collapse -->
   </div>
 </nav>
