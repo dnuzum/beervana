@@ -102,7 +102,11 @@ body{
 
 .logo-container{
 	text-align: center;
-	margin: 0 0 0 0;
+	margin: 60px 0 0 0;
+}
+
+.form{
+	margin-top: 60px;
 }
 
 
@@ -313,6 +317,7 @@ body{
 }
 
 .dev_description{
+	font-size: 2em;
 	text-align: center;
 	font-weight: bold;
 	color: #fff;
@@ -341,10 +346,10 @@ body{
 }
 
 .footer{
-	position: absolute;
-	bottom: 1%;
 	color: #fff;
+	border-radius: 5%;
 	font-weight: bold;
+	width: 340px;
 }
 
 
