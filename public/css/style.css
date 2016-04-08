@@ -236,6 +236,7 @@ body{
 	font-size: 1.4em;
 	margin-top: 1%;
 	margin-bottom: 0;
+	background-color: rgba(255,255,255,.9) !important;
 }
 
 .brew{
