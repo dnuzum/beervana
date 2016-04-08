@@ -40,7 +40,8 @@ app.config([
     })
     .state('about', {
       url: '/about',
-      templateUrl: 'app/views/about.html'
+      templateUrl: 'app/views/about.html',
+      controller: 'AboutCtrl'
     })
     .state('404', {
       url: '/404',
