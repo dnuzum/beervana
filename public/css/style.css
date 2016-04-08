@@ -112,6 +112,8 @@ body{
 
 .navbar-brand{
 	font-family: 'Old Standard TT', serif !important;
+	margin-left: 5% !important;
+	font-size: 2em !important;
 }
 
 .hidden {
@@ -152,7 +154,7 @@ body{
 	font-weight: bold;
 	padding: 1% !important;
 	margin: 5% auto !important;
-	margin-bottom: 200px;
+	margin-bottom: 200px !important;
 }
 
 .beer-search{
@@ -494,6 +496,11 @@ body{
 	background-repeat: no-repeat;;
 }
 
+.navbar-brand{
+	margin-left: 5% !important;
+	font-size: 2em !important;
+}
+
 
 }
 
@@ -591,6 +598,11 @@ body{
 	background-image: url("../images/Jonathan.png");
 	background-size: cover;
 	background-repeat: no-repeat;;
+}
+
+.navbar-brand{
+	margin-left: 5% !important;
+	font-size: 2em !important;
 }
 
 
@@ -735,6 +747,11 @@ body{
 	background-image: url("../images/Jonathan.png");
 	background-size: cover;
 	background-repeat: no-repeat;;
+}
+
+.navbar-brand{
+	margin-left: 5% !important;
+	font-size: 2em !important;
 }
 
 
@@ -882,6 +899,11 @@ body{
 	background-repeat: no-repeat;;
 }
 
+.navbar-brand{
+	margin-left: 5% !important;
+	font-size: 2em !important;
+}
+
 
 }
 
@@ -1027,6 +1049,7 @@ body{
 
 .navbar-brand{
 	font-size: 2em !important;
+	margin-left: 10% !important;
 }
 
 }
@@ -1129,6 +1152,7 @@ body{
 
 .navbar-brand{
 	font-size: 2em !important;
+	margin-left: 10% !important;
 }
 
 .dev{
@@ -1207,6 +1231,7 @@ body{
 
 .navbar-brand{
 	font-size: 2em !important;
+	margin-left: 10% !important;
 }
 
 
