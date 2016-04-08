@@ -4,6 +4,8 @@
 It's Beer:30. Learn how to brew or search for any beer or brewery you could possibly imagine.
 Made in a 5 days by [Derek Nuzum](https://github.com/dnuzum) and [Jonathan Stevenson](https://github.com/JonathanAndrew).
 
+##Screenshot
+![Screenshot](https://github.com/dnuzum/beervana/raw/master/public/images/Screen%20Shot.png)
 
 ##Technologies used
 * HTML5/CSS3
