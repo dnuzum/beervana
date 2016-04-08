@@ -11,7 +11,7 @@
   	<div class="beer-container">
       <ul class="beer-list"> 
         <h1 class="beer-title">{{beer.name}} </br></h1>
-        <li><h3 class="brewery">Brewed by: {{beer.breweries.name}}</br></h3></li>
+        <li><h3 class="brewery">Brewed by: {{beer.breweries[0].name}}</br></h3></li>
         <li><h4>IBU: {{beer.ibu || 'n/a'}} </br></h4></li>
         <li><h4>ABV: {{beer.abv || 'n/a'}}</h4></li>
       </ul>
