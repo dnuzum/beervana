@@ -352,6 +352,31 @@ body{
 	width: 340px;
 }
 
+.favBeer, .favBrewery{
+	font-size: 1.8em;
+	background-color: rgba(255,255,255,.9) !important;
+	padding: 1%;
+	font-weight: bold;
+	width: 70%;
+	margin: 0 auto;
+	text-align: center;
+	font-family: 'Old Standard TT', serif !important;
+}
+
+.favTitle{
+	font-size: 2em;
+	font-weight: bold;
+	color: #fff;
+	font-family: 'Old Standard TT', serif !important;
+	width: 100%;
+	text-align: center;
+	text-decoration: underline;
+	margin: 100px auto;
+	margin-bottom: 2%;
+
+}
+
+
 
 @media screen and (min-width: 650px) and (max-width: 778px){
 
@@ -578,6 +603,10 @@ body{
 	margin: 0 auto;
 }
 
+.favTitle{
+	font-size: 3em;
+}
+
 .brewery-container{
 	width: 900px;
 }
@@ -716,6 +745,10 @@ body{
 body{
 	width: 100%;
 	margin: 0 auto;
+}
+
+.favTitle{
+	font-size: 3em;
 }
 
 .brewery-container{
@@ -857,6 +890,10 @@ body{
 body{
 	width: 100%;
 	margin: 0 auto;
+}
+
+.favTitle{
+	font-size: 3em;
 }
 
 .about_title{
@@ -1001,6 +1038,10 @@ body{
 	margin: 0 auto;
 }
 
+.favTitle{
+	font-size: 3em;
+}
+
 .brewery-container{
 	width: 900px;
 }
@@ -1134,6 +1175,10 @@ body{
 body{
 	width: 100%;
 	margin: 0 auto;
+}
+
+.favTitle{
+	font-size: 3em;
 }
 
 .brewery-container{

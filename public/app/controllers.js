@@ -185,6 +185,22 @@ app.controller('FaveCtrl', ['$scope', '$http', function($scope, $http){
   }, function error(res) {
     res.send(err)
   })
+   $scope.elementIn2 = function($el) {
+    $el.css('visibility', 'visible');
+    $el.addClass('animated fadeInUpBig'); // this example leverages animate.css classes
+  };
+   $scope.elementOut2 = function($el) {
+    $el.css('visibility', 'hidden');
+    $el.removeClass('animated fadeInUpBig'); // this example leverages animate.css classes
+  };
+  $scope.animateElementIn = function($el) {
+    $el.css('visibility', 'visible');
+    $el.addClass('animated fadeInUpBig'); // this example leverages animate.css classes
+  };
+  $scope.animateElementOut = function($el) {
+    $el.css('visibility', 'hidden');
+    $el.removeClass('animated fadeInUpBig'); // this example leverages animate.css classes
+  };
 }])
 
 app.controller('NavCtrl', ['$scope', 'Auth', '$state', function($scope, Auth, $state) {
