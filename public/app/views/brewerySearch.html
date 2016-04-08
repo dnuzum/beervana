@@ -13,7 +13,7 @@
       <p><span class="brewery-description">Description:</br></span> {{brewery.description || 'Not Available'}}</p>
       <p>Website: <a ng-href="{{brewery.website || 'Not Available'}}">{{brewery.website || 'Not Available' }}</a></p>
       <form>
-        <button type="button" class="btn btn-primary fav" ng-click="breweryFave({id: brewery.id, name: brewery.name})">Favorite</button>
+        <button type="button" class="btn btn-primary fav" ng-click="breweryFave({id: brewery.id, name: brewery.name})">+ Favorite</button>
       </form>
     </div>
   </div>
