@@ -1,8 +1,8 @@
 <h3 class="favTitle">Your Favorite Beers:</h3>
 <div class="well favBeer" ng-repeat="userBeer in userBeers track by userBeer.id" style="visibility: hidden" when-visible="elementIn2" when-not-visible="elementOut2">
-  {{userBeer.name}}
+  {{userBeer.name}} <button type="button" ng-click="removeBeer()" class="btn btn-danger">Remove Beer</button>
 </div>
 <h3 class="favTitle">Your Favorite Breweries:</h3>
 <div class="well favBrewery" ng-repeat="userBrewery in userBrewerys track by userBrewery.id" style="visibility: hidden" when-visible="animateElementIn" when-not-visible="animateElementOut">
-  {{userBrewery.name}}
+  {{userBrewery.name}} <button type="button" ng-click="removeBrewery()" class="btn btn-danger">Remove Brewery</button>
 </div>
