@@ -28,16 +28,19 @@ router.post('/addBeer', function(req, res) {
   });
 });
 
-router.post('/removeBeer', function(req, res) {
+router.delete('/removeBeer', function(req, res) {
   var userId = req.user._doc._id;
   User.findById(userId, function(err, user) {
-    // console.log(user)
-    user.beers.push(req.body)
+    console.log(user)
+    console.log("***** delete this fave:", req.body.id);
+    user.beers = user.beers.filter(function(beer) {
+      return beer.id !== req.body.id;
+    })
     user.save(function(err) {
       if (err) return handleError(err)
-        // console.log('Success!');
+        res.sendStatus(200)
     });
-  });
+  })
 });
 
 router.post('/addBrewery', function(req, res) {
@@ -52,16 +55,19 @@ router.post('/addBrewery', function(req, res) {
   });
 });
 
-router.post('/removeBrewery', function(req, res) {
+router.delete('/removeBrewery', function(req, res) {
   var userId = req.user._doc._id;
   User.findById(userId, function(err, user) {
-    // console.log(user)
-    user.brewerys.push(req.body)
+    console.log(user)
+    console.log("***** delete this fave:", req.body.id);
+    user.brewerys = user.brewerys.filter(function(brewery) {
+      return brewery.id !== req.body.id;
+    })
     user.save(function(err) {
       if (err) return handleError(err)
-        // console.log('Success!');
+        res.sendStatus(200)
     });
-  });
+  })
 });
 
 router.get('/userFaves', function(req, res) {

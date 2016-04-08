@@ -174,7 +174,7 @@ app.controller("HomeCtrl", ["$scope", function($scope){
 
 }])
 
-app.controller('FaveCtrl', ['$scope', '$http', function($scope, $http){
+app.controller('FaveCtrl', ['$scope', '$http', '$location', function($scope, $http, $location){
   $scope.userBeers = [];
   $scope.userBrewerys = [];
   $http.get('/api/users/userFaves').then(function success(res) {
@@ -185,6 +185,41 @@ app.controller('FaveCtrl', ['$scope', '$http', function($scope, $http){
   }, function error(res) {
     res.send(err)
   })
+
+  $scope.removeBeer = function(id, beer) {
+    console.log(beer)
+    var req = {
+      method: "DELETE",
+      data: beer,
+      url: "/api/users/removeBeer",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8"
+      }
+    };
+    $http(req).then(function success(res) {
+      $scope.userBeers.splice(id, 1);
+    }, function error(res) {
+      console.log(res);
+    });
+  }
+
+  $scope.removeBrewery = function(id, brewery) {
+    console.log(brewery)
+    var req = {
+      method: "DELETE",
+      data: brewery,
+      url: "/api/users/removeBrewery",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8"
+      }
+    };
+    $http(req).then(function success(res) {
+      $scope.userBrewerys.splice(id, 1);
+    }, function error(res) {
+      console.log(res);
+    });
+  }
+
    $scope.elementIn2 = function($el) {
     $el.css('visibility', 'visible');
     $el.addClass('animated fadeInUpBig'); // this example leverages animate.css classes
