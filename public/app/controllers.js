@@ -7,6 +7,7 @@ app.controller('SearchBeerCtrl', ['$scope', '$http','$rootScope', '$document', f
   // console.log("hi");
   $scope.searchTerm = '';
   $scope.beers = [];
+  $scope.favFail = false;
 
   $scope.search = function() {
     var req = {
@@ -41,6 +42,7 @@ app.controller('SearchBeerCtrl', ['$scope', '$http','$rootScope', '$document', f
       $location.path('');
     }, function error(res) {
       console.log(res);
+      $scope.favFail = true;
     });
   }
 }]);
@@ -71,12 +73,32 @@ app.controller("HomeCtrl", ["$scope", function($scope){
     $el.removeClass('animated fadeInDownBig'); // this example leverages animate.css classes
   };
 
-}])
+}]);
+
+app.controller("AboutCtrl", ["$scope", function($scope){
+   $scope.animateElementIn = function($el) {
+    $el.css('visibility', 'visible');
+    $el.addClass('animated fadeInLeftBig'); // this example leverages animate.css classes
+  };
+  $scope.animateElementOut = function($el) {
+    $el.css('visibility', 'hidden');
+    $el.removeClass('animated fadeInLeftBig'); // this example leverages animate.css classes
+  };
+  $scope.elementIn2 = function($el) {
+    $el.css('visibility', 'visible');
+    $el.addClass('animated fadeInRightBig'); // this example leverages animate.css classes
+  };
+   $scope.elementOut2 = function($el) {
+    $el.css('visibility', 'hidden');
+    $el.removeClass('animated fadeInRightBig'); // this example leverages animate.css classes
+  };
+}]);
 
 app.controller('SearchBreweryCtrl', ['$scope', '$http','$rootScope', '$document', function($scope, $http, $rootScope, $document) {
   // console.log("hi");
   $scope.searchTerm = '';
   $scope.brewerys = [];
+  $scope.favFail = false;
 
   $scope.search = function() {
     var req = {
@@ -111,6 +133,7 @@ app.controller('SearchBreweryCtrl', ['$scope', '$http','$rootScope', '$document'
       $location.path('');
     }, function error(res) {
       console.log(res);
+      $scope.favFail = true;
     });
   }
 }]);
