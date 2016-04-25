@@ -95,7 +95,6 @@ app.controller("AboutCtrl", ["$scope", function($scope){
 }]);
 
 app.controller('SearchBreweryCtrl', ['$scope', '$http','$rootScope', '$document', function($scope, $http, $rootScope, $document) {
-  // console.log("hi");
   $scope.searchTerm = '';
   $scope.brewerys = [];
   $scope.favFail = false;
@@ -254,7 +253,6 @@ app.controller('SignupCtrl', ['$scope', '$http', '$location', function($scope, $
     password: ''
   };
   $scope.userSignup = function() {
-    //to implement
     $http.post('/api/users', $scope.user).then(function success(res) {
       $location.path('/login');
     }, function error(res) {
