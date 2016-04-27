@@ -11,11 +11,11 @@ Developers @GA in Seattle
 /*******************************************/
 .clearfix:after {
      content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
+     display: block !important;
+     clear: both !important;
+     visibility: hidden !important;
+     line-height: 0 !important;
+     height: 0 !important;
 }
 
 .clear {
