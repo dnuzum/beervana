@@ -44,6 +44,12 @@ body{
 	padding: 0;
 }
 
+.linkedin{
+	border-radius: 50%;
+    padding: 1% 2%;
+    background-color: #f5f5f5;
+}
+
 .russel-wilson-quote span{
 	float: right;
 	margin-right: 2%;
